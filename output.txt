@@ -1,0 +1,61 @@
+SET OF MIPS INSTRUCTIONS:
+j 8
+add $s0,$s2,$s0
+add $s0,$s0,$s1
+add $s0,$s1,$s2
+
+=============================================
+PC :: 0000
+
+Type of Instruction Performed: Jump
+
+RS :: 00000
+RT :: 00000
+Instruction: 00001000000000000000000000000100
+CONTROL: 1000
+
+PC == 0000:
+  PASSED! 
+Instruction == 00001000000000000000000000000100:
+  PASSED! 
+CONTROL: 1000:
+  PASSED! 
+=============================================
+Type of Instruction Performed: R_type
+
+RS :: 10000
+RT :: 10001
+RS_VAL ::          1
+RT_VAL ::        111
+RESULT ::        112
+
+PC :: 1000
+Instruction: 00000010000100011000000000100000
+CONTROL :: 0101
+
+PC == 1000:
+  PASSED! 
+Instruction == 00000010000100011000000000100000:
+  PASSED! 
+CONTROL: 0101:
+  PASSED! 
+=============================================
+Type of Instruction Performed: R_type
+
+RS :: 10001
+RT :: 10010
+RS_VAL ::        111
+RT_VAL ::         27
+RESULT ::        138
+
+PC :: 1100
+Instruction: 00000010001100101000000000100000
+CONTROL :: 0101
+
+PC == 1000:
+  PASSED! 
+Instruction == 00000010001100101000000000100000:
+  PASSED! 
+CONTROL: 0101:
+  PASSED! 
+=============================================
